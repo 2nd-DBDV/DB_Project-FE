@@ -9,7 +9,7 @@ const BikeInfoContainer = styled.div`
 const BikeInfo = () => {
   return (
     <BikeInfoContainer>
-      <h2>따릉이 사업소개</h2>
+      <h2>따릉이 사업소개 페이지</h2>
     </BikeInfoContainer>
   );
 };
