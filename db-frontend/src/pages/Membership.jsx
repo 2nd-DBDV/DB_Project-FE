@@ -52,7 +52,7 @@ const Membership = () => {
               
         <ButtonContainer>
           <JoinButton to="/link1">만 13세 회원가입하기</JoinButton>
-          <JoinButton to="/link2">만 14세 이상 회원가입하기</JoinButton>
+          <JoinButton to="/senior_signup">만 14세 이상 회원가입하기</JoinButton>
         </ButtonContainer>
       </MembershipContainer>
     </div>

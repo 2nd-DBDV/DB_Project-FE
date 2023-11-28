@@ -1,16 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
+import Header from '../components/Header';
+import MapComponent from '../components/StationMap';
 
 const StationsContainer = styled.div`
   padding: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Stations = () => {
   return (
-    <StationsContainer>
-      <h2>따릉이 대여소 페이지</h2>
-    </StationsContainer>
+    <div>
+      <Header />
+      <StationsContainer>
+        <MapComponent />
+      </StationsContainer>
+    </div>
   );
 };
 
