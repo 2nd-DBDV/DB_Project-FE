@@ -1,9 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from '../components/Header';
+import mainImage from '../images/main_img.jpg'
+
 const HomeContainer = styled.div`
   padding: 20px;
   text-align: center;
+
+  img {
+    max-width: 90%;
+    height: auto;
+    margin-top: 10px; 
+  }
 `;
 
 const Home = () => {
@@ -11,7 +19,7 @@ const Home = () => {
     <div>
       <Header/>
       <HomeContainer>
-        <h2>따릉이 홈페이지</h2>
+        <img src={mainImage} alt="Main" />
       </HomeContainer>
     </div>
   );
