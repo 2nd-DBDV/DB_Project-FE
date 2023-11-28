@@ -6,6 +6,7 @@ import BikeInfo from './pages/BikeInfo';
 import OpinionBoard from './pages/OpinionBoard';
 import Membership from './pages/Membership';
 import Footer from './components/Footer';
+import SeniorSignup from './pages/SeniorSignup';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/opinionBoard" element={<OpinionBoard/>} />
 
           <Route path="/membership" element={<Membership/>} />
+          <Route path="/senior_signup" element={<SeniorSignup/>} />
         </Routes>
       </div>
       <Footer/>
