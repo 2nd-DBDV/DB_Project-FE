@@ -1,48 +1,116 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import myImage from '../images/logo.png';
 
-const HeaderContainer = styled.header`
-  background-color: #ededed;
-  color: #222;
-  padding: 10px;
-  text-align: center;
+const HeaderWrapContainer = styled.header`
+  padding: 10px 20% 10px 20%;
+  margin-bottom: 10px;
+  border-bottom: 0.5px solid black;
 `;
 
-const Nav = styled.nav`
+
+const TopContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 10px;
+  border-bottom: 0.5px solid black;
+
   ul {
     list-style: none;
-    padding: 0;
+    padding: 15px;
     margin: 0;
     display: flex;
-    justify-content: center;
+
     li {
-      margin: 0 10px;
+      margin: 0px 10px;
+
       a {
         text-decoration: none;
         color: #222;
         font-weight: bold;
-        &:hover {
-          text-decoration: underline;
-        }
       }
     }
   }
 `;
 
+const MainLogoContainer = styled.img`
+  width: 100px;
+  height: auto;
+  display: flex;
+  justify-content: left;
+`;
+
+const LogoLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  
+`;
+
+const Nav = styled.nav`
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+ul {
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+  display: flex;
+
+  li {
+    margin: 0px 10px;
+
+    a {
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+    }
+  }
+}
+`;
+
 const Header = () => {
   return (
-    <HeaderContainer>
-      <h1>따릉이 홈페이지</h1>
+    <HeaderWrapContainer>
+
+      <TopContainer>
+        <ul>
+          <li>English</li>
+          <li>中國語</li>
+          <li>日本語</li>
+          <li>한국어</li>
+        </ul>
+
+        <ul>
+          <li>로그인</li>
+          <li><Link to="/membership">회원가입</Link></li>
+          <li>이용안내</li>
+        </ul>
+      </TopContainer>
+
       <Nav>
         <ul>
-          <li><Link to="/">홈</Link></li>
+          <li>
+            <LogoLink to="/">
+              <MainLogoContainer src = {myImage} alt="Logo" />
+            </LogoLink>
+          </li>
+        </ul>
+
+        <ul>
           <li><Link to="/bike_info">사업소개</Link></li>
-          <li><Link to="/stations">대여소</Link></li>
+          <li><Link to="/stations">대여소 조회</Link></li>
+          <li>이용권 구매</li>
           <li><Link to="/opinionBoard">문의/FAQ</Link></li>
+          <li>공지사항</li>
+          <li>안전수칙</li>
         </ul>
       </Nav>
-    </HeaderContainer>
+
+    </HeaderWrapContainer>
   );
 };
 
