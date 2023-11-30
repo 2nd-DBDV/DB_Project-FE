@@ -104,7 +104,8 @@ const Header = () => {
           <li><Link to="/bike_info">사업소개</Link></li>
           <li><Link to="/stations">대여소 조회</Link></li>
           <li>이용권 구매</li>
-          <li><Link to="/opinionBoard">문의/FAQ</Link></li>
+          <li>문의/FAQ</li>
+          <li><Link to="/opinionBoard">게시판</Link></li>
           <li>공지사항</li>
           <li>안전수칙</li>
         </ul>
