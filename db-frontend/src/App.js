@@ -7,6 +7,7 @@ import OpinionBoard from './pages/OpinionBoard';
 import Membership from './pages/Membership';
 import Footer from './components/Footer';
 import SeniorSignup from './pages/SeniorSignup';
+import UserBoard from './pages/UserBoard';
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
 
           <Route path="/membership" element={<Membership/>} />
           <Route path="/senior_signup" element={<SeniorSignup/>} />
+
+          <Route path="/userboard" element={<UserBoard/>} />
         </Routes>
       </div>
       <Footer/>
