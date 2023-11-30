@@ -2,10 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.div`
+  bottom: 0;
   width: 100%;
   padding: 10px 20% 10px 20%;
   text-align: center;
   background-color: #f0f0f0;
+  margin-top : 70px;
 `;
 
 const BottomInfo = styled.div`

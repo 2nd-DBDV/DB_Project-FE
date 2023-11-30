@@ -3,10 +3,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Sw
 import Home from './pages/Home';
 import Stations from './pages/Stations';
 import BikeInfo from './pages/BikeInfo';
-import OpinionBoard from './pages/OpinionBoard';
+import OpinionBoard from './pages/Board/OpinionBoard';
 import Membership from './pages/Membership';
 import Footer from './components/Footer';
 import SeniorSignup from './pages/SeniorSignup';
+import UserBoard from './pages/Board/UserBoard';
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
 
           <Route path="/membership" element={<Membership/>} />
           <Route path="/senior_signup" element={<SeniorSignup/>} />
+
+          <Route path="/userboard" element={<UserBoard/>} />
         </Routes>
       </div>
       <Footer/>
