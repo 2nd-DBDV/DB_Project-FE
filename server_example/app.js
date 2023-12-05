@@ -42,11 +42,12 @@ server.listen(port, function (req, res) {
 });
 
 // 회원가입 데이터
-server.post("/signup", function (req, res) {
-  const { user_name, user_id, email, password } = req.body;
+server.post("/senior_signup", function (req, res) {
+  const { user_name, nickname, user_id, email, password } = req.body;
 
   const newUser = {
     user_id,
+    nickname,
     user_name,
     distance: 0,
     rank: data.User.length + 1
@@ -54,7 +55,7 @@ server.post("/signup", function (req, res) {
 
   data.User.push(newUser);
 
-  console.log('Received data:', { user_name, user_id, email, password });
+  console.log('Received data:', { user_name, nickname, user_id, email, password });
 
   updateRankings();
 
