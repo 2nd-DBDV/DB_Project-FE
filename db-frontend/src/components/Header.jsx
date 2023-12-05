@@ -106,7 +106,7 @@ const Header = () => {
           <li>이용권 구매</li>
           <li>문의/FAQ</li>
           <li><Link to="/opinionBoard">게시판</Link></li>
-          <li>공지사항</li>
+          <li><Link to="/ranking">랭킹</Link></li>
           <li>안전수칙</li>
         </ul>
       </Nav>
