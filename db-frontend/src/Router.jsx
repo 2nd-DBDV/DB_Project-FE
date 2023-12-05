@@ -7,6 +7,7 @@ import OpinionBoard from './pages/Board/OpinionBoard';
 import Membership from './pages/Membership';
 import SeniorSignup from './pages/SeniorSignup';
 import UserBoard from './pages/Board/UserBoard';
+import Ranking from './pages/Ranking';
 
 const Router = () => {
   return (
@@ -15,11 +16,13 @@ const Router = () => {
         <Route path="/stations" element={<Stations />} />
         <Route path="/bike_info" element={<BikeInfo/>} />
         <Route path="/opinionBoard" element={<OpinionBoard/>} />
+        <Route path="/ranking" element={<Ranking/>} />
 
         <Route path="/membership" element={<Membership/>} />
         <Route path="/senior_signup" element={<SeniorSignup/>} />
 
         <Route path="/userboard" element={<UserBoard/>} />
+
     </Routes>
   );
 }

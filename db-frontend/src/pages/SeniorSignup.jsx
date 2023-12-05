@@ -66,7 +66,7 @@ const SeniorSignup = () => {
 
   const handleSignUp = () => {
     axios
-      .post('http://localhost:8080/', {
+      .post('http://localhost:8080/senior_signup', {
         user_name: username,
         nickname: nickname,
         user_id: userid, 
