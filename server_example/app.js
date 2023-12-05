@@ -22,8 +22,8 @@ server.listen(port, function (req, res) {
 });
 
 server.post("/", function (req, res) {
-    const { user_name, email, user_id, password } = req.body;
+    const { user_name, nickname, email, user_id, password } = req.body;
 
     // test data 받는지 확인
-    console.log('Received data:', { user_name, email, user_id, password });
+    console.log('Received data:', { user_name, nickname, email, user_id, password });
 });

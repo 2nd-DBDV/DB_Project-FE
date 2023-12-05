@@ -37,11 +37,12 @@ const SignUpButton = styled.button`
 `;
 
 const SeniorSignup = () => {
-  
+
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [userid, setUserid] = useState('');
+  const [nickname, setNickname] = useState('');
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -59,13 +60,18 @@ const SeniorSignup = () => {
     setUserid(e.target.value);
   };
 
+  const handleNicknameChange = (e) => {
+    setNickname(e.target.value);
+  };
+
   const handleSignUp = () => {
     axios
       .post('http://localhost:8080/', {
         user_name: username,
+        nickname: nickname,
         user_id: userid, 
         email: email,    
-        password: password 
+        password: password
       })
       .then((res) => {
       })
@@ -83,6 +89,10 @@ const SeniorSignup = () => {
           <SignUpLabel>
             이름:
             <SignUpInput type="text" value={username} onChange={handleUsernameChange} />
+          </SignUpLabel>
+          <SignUpLabel>
+            닉네임:
+            <SignUpInput type="text" value={nickname} onChange={handleNicknameChange} />
           </SignUpLabel>
           <SignUpLabel>
             이메일:
