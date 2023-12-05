@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Header from '../components/Header';
+import axios from 'axios';
 
 const SignUpFormContainer = styled.div`
   max-width: 400px;
@@ -39,7 +40,6 @@ const SeniorSignup = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -57,31 +57,43 @@ const SeniorSignup = () => {
     console.log('Username:', username);
     console.log('Email:', email);
     console.log('Password:', password);
+
+    axios
+      .post('http://localhost:8080/', {
+        user_id: username, 
+        email: email,    
+        password: password 
+      })
+      .then((res) => {
+      })
+      .catch((err) => {
+        console.log('에러');
+      });
   };
 
   return (
     <div>
-    <Header/>
-    <SignUpFormContainer>
-      <h2>회원가입</h2>
-      <form>
-        <SignUpLabel>
-          아이디:
-          <SignUpInput type="text" value={username} onChange={handleUsernameChange} />
-        </SignUpLabel>
-        <SignUpLabel>
-          이메일:
-          <SignUpInput type="email" value={email} onChange={handleEmailChange} />
-        </SignUpLabel>
-        <SignUpLabel>
-          비밀번호:
-          <SignUpInput type="password" value={password} onChange={handlePasswordChange} />
-        </SignUpLabel>
-        <SignUpButton type="button" onClick={handleSignUp}>
-          가입하기
-        </SignUpButton>
-      </form>
-    </SignUpFormContainer>
+      <Header/>
+      <SignUpFormContainer>
+        <h2>회원가입</h2>
+        <form>
+          <SignUpLabel>
+            아이디:
+            <SignUpInput type="text" value={username} onChange={handleUsernameChange} />
+          </SignUpLabel>
+          <SignUpLabel>
+            이메일:
+            <SignUpInput type="email" value={email} onChange={handleEmailChange} />
+          </SignUpLabel>
+          <SignUpLabel>
+            비밀번호:
+            <SignUpInput type="password" value={password} onChange={handlePasswordChange} />
+          </SignUpLabel>
+          <SignUpButton type="button" onClick={handleSignUp}>
+            가입하기
+          </SignUpButton>
+        </form>
+      </SignUpFormContainer>
     </div>
   );
 };
