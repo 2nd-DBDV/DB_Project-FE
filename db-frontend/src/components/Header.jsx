@@ -85,9 +85,8 @@ const Header = () => {
         </ul>
 
         <ul>
-          <li>로그인</li>
+          <li><Link to="/login">로그인</Link></li>
           <li><Link to="/membership">회원가입</Link></li>
-          <li>이용안내</li>
         </ul>
       </TopContainer>
 
@@ -103,11 +102,8 @@ const Header = () => {
         <ul>
           <li><Link to="/bike_info">사업소개</Link></li>
           <li><Link to="/stations">대여소 조회</Link></li>
-          <li>이용권 구매</li>
-          <li>문의/FAQ</li>
           <li><Link to="/opinionBoard">게시판</Link></li>
           <li><Link to="/ranking">랭킹</Link></li>
-          <li>안전수칙</li>
         </ul>
       </Nav>
 
