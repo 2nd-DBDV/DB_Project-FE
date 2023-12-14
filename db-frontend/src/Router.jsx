@@ -8,6 +8,7 @@ import Membership from './pages/Membership';
 import SeniorSignup from './pages/SeniorSignup';
 import UserBoard from './pages/Board/UserBoard';
 import Ranking from './pages/Ranking';
+import Login from './pages/Login';
 
 const Router = () => {
   return (
@@ -19,6 +20,7 @@ const Router = () => {
         <Route path="/ranking" element={<Ranking/>} />
 
         <Route path="/membership" element={<Membership/>} />
+        <Route path="/login" element={<Login/>} />
         <Route path="/senior_signup" element={<SeniorSignup/>} />
 
         <Route path="/userboard" element={<UserBoard/>} />

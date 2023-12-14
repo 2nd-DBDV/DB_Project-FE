@@ -76,3 +76,15 @@ function updateRankings() {
     user.rank = index + 1;
   });
 }
+
+server.post('/login', (req, res) => {
+  const { user_id, password } = req.body;
+
+  const validUser = user_id === 'son' && password === 'password1';
+
+  if (!validUser) {
+    return res.status(400).json({ error: '아이디 비밀번호 오류' });
+  }
+
+  return res.status(200).json({ success: true, message: '로그인 성공' });
+});
